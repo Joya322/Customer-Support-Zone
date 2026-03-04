@@ -1,4 +1,12 @@
+// import { useContext } from "react";
+// import { TaskContext } from "../context/TaskContext";
+
+import { useContext } from "react";
+import TaskContext from "../context/TaskContext";
+
 const Banner = () => {
+  const { inProgressTasks, resolvedTasks } = useContext(TaskContext);
+
   return (
     <div className="flex flex-col md:flex-row justify-center items-center gap-5 py-10 text-black w-full">
       {/* left card */}
@@ -6,7 +14,7 @@ const Banner = () => {
         <img src="./vector1.png" alt="" />
         <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center">
           <p className="text-xl">In-Progress</p>
-          <h3 className="text-4xl">0</h3>
+          <h3 className="text-4xl">{inProgressTasks.length}</h3>
         </div>
         <img className="transform scale-x-[-1]" src="./vector1.png" alt="" />
       </div>
@@ -16,7 +24,7 @@ const Banner = () => {
         <img src="./vector1.png" alt="" />
         <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center">
           <p className="text-xl">Resolved</p>
-          <h3 className="text-4xl">0</h3>
+          <h3 className="text-4xl">{resolvedTasks.length}</h3>
         </div>
         <img className="transform scale-x-[-1]" src="./vector1.png" alt="" />
       </div>

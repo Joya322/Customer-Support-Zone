@@ -1,31 +1,47 @@
-import { Suspense } from "react";
+import { Suspense, useContext } from "react";
 import Tickets from "./Tickets";
+import TaskStatusCard from "./TaskStatusCard";
+import TaskContext from "../context/TaskContext";
 
-const fetchTickets = async() => {
-    const res = await fetch('./tickets.json');
+const fetchTickets = async () => {
+  const res = await fetch("./tickets.json");
 
-    return res.json();
-}
+  return res.json();
+};
 
 const CardsContainer = () => {
-    const ticketsPromise = fetchTickets();
+  const ticketsPromise = fetchTickets();
+
+  const { inProgressTasks } = useContext(TaskContext);
+  // console.log(tasks);
 
   return (
     <div className="flex flex-col-reverse lg:flex-row px-5 py-8 justify-center items-start gap-5 opacity-85">
       {/* left */}
-      <div className="lg:w-2/3">
+      <div className="w-full lg:w-2/3">
         <h3 className="text-xl font-bold mb-4">Customer Tickets</h3>
 
         {/* tickets */}
-        <Suspense fallback={<h2 className="text-center">Tickets Loading...</h2>}>
+        <Suspense
+          fallback={<h2 className="text-center">Tickets Loading...</h2>}
+        >
           <Tickets ticketsPromise={ticketsPromise} />
         </Suspense>
       </div>
       {/* right */}
-      <div className="lg:w-1/3 border ">
+      <div className="w-full lg:w-1/3  ">
         {/* task status */}
-        <h3 className="text-xl font-bold mb-1">Task Status</h3>
-        <p>Select a ticket to add to task Status</p>
+        <h3 className="text-xl font-bold mb-3">Task Status</h3>
+
+        <div className="flex flex-col justify-center items-start gap-4">
+          {inProgressTasks.length === 0 ? (
+            <p>Select a ticket to add to task Status</p>
+          ) : (
+            inProgressTasks.map((inProgressTask) => (
+              <TaskStatusCard key={inProgressTask.id} inProgressTask={inProgressTask} />
+            ))
+          )}
+        </div>
 
         {/* Resolved Task */}
         <h3 className="text-xl font-bold  mb-1 mt-5">Resolved Task</h3>

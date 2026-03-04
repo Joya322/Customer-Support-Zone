@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import  { use } from "react";
 import Ticket from "./Ticket";
 
 const Tickets = ({ ticketsPromise }) => {
