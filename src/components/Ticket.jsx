@@ -16,16 +16,12 @@ const Ticket = ({ ticket }) => {
   } = ticket;
 
   const handleInProgressTasks = () => {
-    const isDuplicate = inProgressTasks.find((t) => t.id === ticket.id);
-
-    console.log(isDuplicate);
     if (inProgressTasks.find((t) => t.id === ticket.id)) {
       toast.warning("This task is already in Progress!");
       return;
-    } 
-      toast.success("Task in Progress!");
-      return setInProgressTasks([...inProgressTasks, ticket]);
-    
+    }
+    toast.success("Task in Progress!");
+    setInProgressTasks([...inProgressTasks, ticket]);
   };
 
   return (
