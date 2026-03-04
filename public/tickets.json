@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "ticketId": "001",
+    "title": "Login issues on mobile",
+    "description": "Customer cannot log in using the mobile app. Error code 401 appears.",
+    "customer": "Alice Johnson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-01T09:15:00Z"
+  },
+  {
+    "id": 2,
+    "ticketId": "002",
+    "title": "Billing discrepancy",
+    "description": "Invoice amount is higher than expected. Customer requests clarification.",
+    "customer": "Bob Smith",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-03-02T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "ticketId": "003",
+    "title": "Feature request: Dark mode",
+    "description": "Customer suggests adding a dark mode option for the dashboard.",
+    "customer": "Charlie Davis",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2026-02-28T10:00:00Z"
+  },
+  {
+    "id": 4,
+    "ticketId": "004",
+    "title": "Unable to reset password",
+    "description": "Password reset email not received by customer.",
+    "customer": "Diana Green",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03T08:45:00Z"
+  },
+  {
+    "id": 5,
+    "ticketId": "005",
+    "title": "App crashes on startup",
+    "description": "Customer reports that the app crashes immediately after launch on Android 12.",
+    "customer": "Ethan Brown",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-01T16:20:00Z"
+  },
+  {
+    "id": 6,
+    "ticketId": "006",
+    "title": "Refund not processed",
+    "description": "Customer requested a refund two weeks ago but has not received it yet.",
+    "customer": "Fiona White",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-02-25T11:10:00Z"
+  },
+  {
+    "id": 7,
+    "ticketId": "007",
+    "title": "Incorrect account information",
+    "description": "Customer noticed wrong billing address in their profile.",
+    "customer": "George King",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04T09:50:00Z"
+  },
+  {
+    "id": 8,
+    "ticketId": "008",
+    "title": "Cannot upload documents",
+    "description": "File upload fails for PDF files larger than 5MB.",
+    "customer": "Hannah Lee",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-02T13:05:00Z"
+  },
+  {
+    "id": 9,
+    "ticketId": "009",
+    "title": "Notification emails not received",
+    "description": "Customer does not get notification emails for new updates.",
+    "customer": "Ian Moore",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2026-02-27T17:25:00Z"
+  },
+  {
+    "id": 10,
+    "ticketId": "010",
+    "title": "Error while placing order",
+    "description": "Order fails with code 502 when submitting payment details.",
+    "customer": "Julia Scott",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03T12:40:00Z"
+  },
+  {
+    "id": 11,
+    "ticketId": "011",
+    "title": "Unable to update profile picture",
+    "description": "Profile picture upload fails intermittently on iOS devices.",
+    "customer": "Kevin Turner",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-03-01T15:55:00Z"
+  },
+  {
+    "id": 12,
+    "ticketId": "012",
+    "title": "Slow loading dashboard",
+    "description": "Dashboard takes more than 15 seconds to load for customer.",
+    "customer": "Laura Adams",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-03-02T10:30:00Z"
+  },
+  {
+    "id": 13,
+    "ticketId": "013",
+    "title": "Two-factor authentication not working",
+    "description": "Customer cannot receive OTP on their phone.",
+    "customer": "Michael Clark",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04T11:00:00Z"
+  },
+  {
+    "id": 14,
+    "ticketId": "014",
+    "title": "Subscription plan downgrade issue",
+    "description": "Customer downgraded plan but billing still reflects old plan.",
+    "customer": "Nina Patel",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-03-03T09:30:00Z"
+  },
+  {
+    "id": 15,
+    "ticketId": "015",
+    "title": "App notification sound not working",
+    "description": "Customer reports no sound for notifications on Android 11.",
+    "customer": "Oliver Wright",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2026-03-02T18:20:00Z"
+  }
+]

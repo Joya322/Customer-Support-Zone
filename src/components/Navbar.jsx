@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center py-3 w-11/12 mx-auto">
         <div className="">
           <a className="btn btn-ghost text-xl">
-            CS<i class="fa-solid fa-minus"></i>Ticket System
+            CS<i className="fa-solid fa-minus"></i>Ticket System
           </a>
         </div>
         <div className="">
@@ -36,11 +36,11 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <details class="dropdown lg:hidden ">
-            <summary class="btn btn-ghost m-1">
-              <i class="fa-solid fa-bars"></i>
+          <details className="dropdown lg:hidden ">
+            <summary className="btn btn-ghost m-1">
+              <i className="fa-solid fa-bars"></i>
             </summary>
-            <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm right-2">
+            <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm right-2">
               <li>
                 <a>Home</a>
               </li>
