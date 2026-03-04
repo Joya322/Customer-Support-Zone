@@ -2,6 +2,7 @@ import { Suspense, useContext } from "react";
 import Tickets from "./Tickets";
 import TaskStatusCard from "./TaskStatusCard";
 import TaskContext from "../context/TaskContext";
+import ResolvedTask from "./ResolvedTask";
 
 const fetchTickets = async () => {
   const res = await fetch("./tickets.json");
@@ -12,7 +13,7 @@ const fetchTickets = async () => {
 const CardsContainer = () => {
   const ticketsPromise = fetchTickets();
 
-  const { inProgressTasks } = useContext(TaskContext);
+  const { inProgressTasks, resolvedTasks } = useContext(TaskContext);
   // console.log(tasks);
 
   return (
@@ -38,14 +39,26 @@ const CardsContainer = () => {
             <p>Select a ticket to add to task Status</p>
           ) : (
             inProgressTasks.map((inProgressTask) => (
-              <TaskStatusCard key={inProgressTask.id} inProgressTask={inProgressTask} />
+              <TaskStatusCard
+                key={inProgressTask.id}
+                inProgressTask={inProgressTask}
+              />
             ))
           )}
         </div>
 
         {/* Resolved Task */}
-        <h3 className="text-xl font-bold  mb-1 mt-5">Resolved Task</h3>
-        <p>No resolved tasks yet.</p>
+        <h3 className="text-xl font-bold  mb-2 mt-6">Resolved Task</h3>
+
+        <div className="flex flex-col justify-center items-start gap-3">
+          {resolvedTasks.length === 0 ? (
+            <p>No resolved tasks yet.</p>
+          ) : (
+            resolvedTasks.map((resolvedTask) => (
+              <ResolvedTask key={resolvedTask.id} resolvedTask={resolvedTask} />
+            ))
+          )}
+        </div>
       </div>
     </div>
   );

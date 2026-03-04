@@ -4,11 +4,14 @@ import TaskContext from "../context/TaskContext";
 const TaskStatusCard = ({ inProgressTask }) => {
   const { setResolvedTasks, inProgressTasks, setInProgressTasks } =
     useContext(TaskContext);
+
   const { title } = inProgressTask;
 
   const handleResolvedTasks = () => {
-    setInProgressTasks(inProgressTasks.filter((t) => t.id !== inProgressTask.id))
-    
+    setInProgressTasks(
+      inProgressTasks.filter((t) => t.id !== inProgressTask.id),
+    );
+
     setResolvedTasks((prev) => [...prev, inProgressTask]);
   };
 
