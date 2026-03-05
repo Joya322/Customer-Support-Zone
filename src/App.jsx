@@ -3,6 +3,7 @@ import "./App.css";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import { TaskProvider } from "./context/TaskContext";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,8 +11,12 @@ function App() {
       <ToastContainer position="top-right"/>
       {/* navbar */}
       <Navbar />
+
       {/* Main */}
       <Main />
+
+      {/* footer */}
+      <Footer/>
     </TaskProvider>
   );
 }

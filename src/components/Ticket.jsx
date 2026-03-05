@@ -40,21 +40,23 @@ const Ticket = ({ ticket }) => {
           {status}
         </span>
       </div>
+
       <p>{description}</p>
-      <div className="flex justify-between items-center mt-auto">
-        <div>
-          <span className="mr-2">#{ticketId}</span>{" "}
+
+      <div className="flex justify-between gap-3 items-center mt-auto">
+        <div className="flex flex-col lg:flex-row gap-1 items-center">
+          <span className="text-xs">#{ticketId}</span>
           <span
-            className={`text-sm font-medium ${priority === "HIGH PRIORITY" ? "text-red-500" : priority === "MEDIUM PRIORITY" ? "text-warning" : "text-green-500"}`}
+            className={`text-xs ${priority === "HIGH PRIORITY" ? "text-red-500" : priority === "MEDIUM PRIORITY" ? "text-warning" : "text-green-500"}`}
           >
             {priority}
           </span>
         </div>
-        <div>
-          <span className="mr-2">{customer}</span>
+        <div className="flex flex-col lg:flex-row gap-1 items-center">
+          <span className="text-sm">{customer}</span>
           <span>
-            <i className="fa-regular fa-calendar mr-1"></i>
-            <span>{createdAt.slice(0, 10)}</span>
+            <i className="fa-regular fa-calendar mr-1 text-xs"></i>
+            <span className="text-xs">{createdAt.slice(0, 10)}</span>
           </span>
         </div>
       </div>

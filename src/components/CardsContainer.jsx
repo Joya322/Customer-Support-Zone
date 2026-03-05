@@ -17,9 +17,9 @@ const CardsContainer = () => {
   // console.log(tasks);
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row px-5 py-8 justify-center items-start gap-5 opacity-85">
+    <div className="flex flex-col-reverse lg:flex-row px-5 py-8 justify-center items-start gap-2 opacity-85 w-full">
       {/* left */}
-      <div className="w-full lg:w-2/3">
+      <div className="w-full lg:w-9/12">
         <h3 className="text-xl font-bold mb-4">Customer Tickets</h3>
 
         {/* tickets */}
@@ -30,7 +30,7 @@ const CardsContainer = () => {
         </Suspense>
       </div>
       {/* right */}
-      <div className="w-full lg:w-1/3  ">
+      <div className="w-full lg:w-3/12 pl-1">
         {/* task status */}
         <h3 className="text-xl font-bold mb-3">Task Status</h3>
 
