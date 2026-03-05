@@ -29,21 +29,23 @@ const Ticket = ({ ticket }) => {
       onClick={handleInProgressTasks}
       className="relative p-5 shadow-md  bg-white rounded-lg flex flex-col gap-2"
     >
-      <div className="flex justify-between items-center">
-        <h4 className="font-bold text-lg">{title}</h4>
-        <span
-          className={`inline-flex items-center rounded-2xl  px-2 py-1 text-xs font-bold ${status === "In-Progress" ? "text-yellow-500 bg-yellow-200" : "text-green-500 bg-green-200"}`}
-        >
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto]">
+        <h4 className="font-bold text-lg grow">{title}</h4>
+        <div className="flex justify-end items-start">
           <span
-            className={`p-1 rounded-full mr-1 ${status === "In-Progress" ? "bg-yellow-500" : "bg-green-500"}`}
-          ></span>
-          {status}
-        </span>
+            className={`inline-flex items-center rounded-2xl  px-2 py-1 text-xs font-bold ${status === "In-Progress" ? "text-yellow-500 bg-yellow-200" : "text-green-500 bg-green-200"}`}
+          >
+            <span
+              className={`p-1 rounded-full mr-1 ${status === "In-Progress" ? "bg-yellow-500" : "bg-green-500"}`}
+            ></span>
+            {status}
+          </span>
+        </div>
       </div>
 
       <p>{description}</p>
 
-      <div className="flex justify-between gap-3 items-center mt-auto">
+      <div className="flex justify-between items-center mt-auto">
         <div className="flex flex-col lg:flex-row gap-1 items-center">
           <span className="text-xs">#{ticketId}</span>
           <span
@@ -52,12 +54,12 @@ const Ticket = ({ ticket }) => {
             {priority}
           </span>
         </div>
-        <div className="flex flex-col lg:flex-row gap-1 items-center">
-          <span className="text-sm">{customer}</span>
-          <span>
-            <i className="fa-regular fa-calendar mr-1 text-xs"></i>
-            <span className="text-xs">{createdAt.slice(0, 10)}</span>
-          </span>
+        <div className="flex flex-col lg:flex-row gap-1 items-center text-xs">
+          <p>{customer}</p>
+          <p>
+            <i className="fa-regular fa-calendar mr-1"></i>
+            <span>{createdAt.slice(0, 10)}</span>
+          </p>
         </div>
       </div>
     </div>
