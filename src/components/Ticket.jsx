@@ -5,15 +5,8 @@ import { toast } from "react-toastify";
 const Ticket = ({ ticket }) => {
   const { inProgressTasks, setInProgressTasks } = useContext(TaskContext);
 
-  const {
-    title,
-    description,
-    customer,
-    priority,
-    status,
-    createdAt,
-    ticketId,
-  } = ticket;
+  const { title, description, customer, priority, createdAt, ticketId } =
+    ticket;
 
   const handleInProgressTasks = () => {
     if (inProgressTasks.find((t) => t.id === ticket.id)) {
@@ -30,20 +23,22 @@ const Ticket = ({ ticket }) => {
       className="relative p-5 shadow-md  bg-white rounded-lg flex flex-col gap-2"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto]">
-        <h4 className="font-bold text-lg grow">{title}</h4>
+        <h4 className="font-bold text-base grow">{title}</h4>
         <div className="flex justify-end items-start">
           <span
-            className={`inline-flex items-center rounded-2xl  px-2 py-1 text-xs font-bold ${status === "In-Progress" ? "text-yellow-500 bg-yellow-200" : "text-green-500 bg-green-200"}`}
+            className={`inline-flex items-center rounded-2xl  px-2 py-1 text-xs font-bold ${inProgressTasks.find((t) => t.id === ticket.id) ? "text-yellow-500 bg-yellow-200" : "text-green-500 bg-green-200"}`}
           >
             <span
-              className={`p-1 rounded-full mr-1 ${status === "In-Progress" ? "bg-yellow-500" : "bg-green-500"}`}
+              className={`p-1 rounded-full mr-1 ${inProgressTasks.find((t) => t.id === ticket.id) ? "bg-yellow-500" : "bg-green-500"}`}
             ></span>
-            {status}
+            {inProgressTasks.find((t) => t.id === ticket.id)
+              ? "In-Progress"
+              : "Open"}
           </span>
         </div>
       </div>
 
-      <p>{description}</p>
+      <p className="text-base">{description}</p>
 
       <div className="flex justify-between items-center mt-auto">
         <div className="flex flex-col lg:flex-row gap-1 items-center">

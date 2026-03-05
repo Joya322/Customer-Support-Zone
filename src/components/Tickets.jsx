@@ -1,8 +1,10 @@
-import  { use } from "react";
+import { useContext } from "react";
 import Ticket from "./Ticket";
+import TaskContext from "../context/TaskContext";
 
-const Tickets = ({ ticketsPromise }) => {
-  const tickets = use(ticketsPromise);
+const Tickets = () => {
+  const { tickets } = useContext(TaskContext);
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
       {tickets.map((ticket) => (

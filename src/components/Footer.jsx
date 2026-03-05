@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           <nav className="flex flex-col gap-3 w-full lg:w-1/5">
             <h6 className="text-lg font-medium">
-              CS <i class="fa-solid fa-minus"></i> Ticket System
+              CS <i className="fa-solid fa-minus"></i> Ticket System
             </h6>
             <p className="opacity-80">
               This is a modern customer support platform designed to streamline
@@ -42,25 +42,25 @@ const Footer = () => {
             <h6 className="text-lg font-medium">Social Links</h6>
             <a className="link link-hover opacity-80">
               <span className="bg-white mr-2 rounded-full">
-                <i class="fa-brands fa-x-twitter  text-black"></i>
+                <i className="fa-brands fa-x-twitter  text-black"></i>
               </span>
-              @CS <i class="fa-solid fa-minus"></i> Ticket System
+              @CS <i className="fa-solid fa-minus"></i> Ticket System
             </a>
             <a className="link link-hover opacity-80">
               <span className="bg-white mr-2 rounded-full">
-                <i class="fa-brands fa-linkedin-in text-black"></i>
+                <i className="fa-brands fa-linkedin-in text-black"></i>
               </span>
-              @CS <i class="fa-solid fa-minus"></i> Ticket System
+              @CS <i className="fa-solid fa-minus"></i> Ticket System
             </a>
             <a className="link link-hover opacity-80">
               <span className="bg-white mr-2 rounded-full">
-                <i class="fa-brands fa-facebook-f text-black"></i>
+                <i className="fa-brands fa-facebook-f text-black"></i>
               </span>
-              @CS <i class="fa-solid fa-minus"></i> Ticket System
+              @CS <i className="fa-solid fa-minus"></i> Ticket System
             </a>
             <a className="link link-hover opacity-80">
               <span className="bg-white mr-2 rounded-full">
-                <i class="fa-regular fa-envelope text-black"></i>
+                <i className="fa-regular fa-envelope text-black"></i>
               </span>
               support@cst.com
             </a>
@@ -70,7 +70,7 @@ const Footer = () => {
         <div className="h-px bg-white opacity-50 my-8 w-full"></div>
 
         <p className="opacity-60">
-          &copy; 2025 CS <i class="fa-solid fa-minus"></i>{" "}
+          &copy; 2025 CS <i className="fa-solid fa-minus"></i>{" "}
         Ticket System. All rights reserved.</p>
       </div>
     </footer>

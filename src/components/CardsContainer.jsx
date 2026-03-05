@@ -4,17 +4,8 @@ import TaskStatusCard from "./TaskStatusCard";
 import TaskContext from "../context/TaskContext";
 import ResolvedTask from "./ResolvedTask";
 
-const fetchTickets = async () => {
-  const res = await fetch("./tickets.json");
-
-  return res.json();
-};
-
 const CardsContainer = () => {
-  const ticketsPromise = fetchTickets();
-
   const { inProgressTasks, resolvedTasks } = useContext(TaskContext);
-  // console.log(tasks);
 
   return (
     <div className="flex flex-col-reverse lg:flex-row px-5 py-8 justify-center items-start gap-2 opacity-85 w-full">
@@ -26,7 +17,7 @@ const CardsContainer = () => {
         <Suspense
           fallback={<h2 className="text-center">Tickets Loading...</h2>}
         >
-          <Tickets ticketsPromise={ticketsPromise} />
+          <Tickets />
         </Suspense>
       </div>
       {/* right */}
