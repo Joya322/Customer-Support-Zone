@@ -1,6 +1,6 @@
 # Live Link: [http://hissing-sugar.surge.sh/]
 
-## Questions and Answers:
+# Questions and Answers:
 
 # What is JSX, and why is it used?
 
