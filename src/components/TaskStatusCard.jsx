@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import TaskContext from "../context/TaskContext";
 import { toast } from "react-toastify";
 
@@ -14,7 +14,6 @@ const TaskStatusCard = ({ inProgressTask }) => {
   const { title } = inProgressTask;
 
   const handleResolvedTasks = () => {
-    // console.log(inProgressTask);
     setTickets(tickets.filter((t) => t.id !== inProgressTask.id));
 
     setInProgressTasks(

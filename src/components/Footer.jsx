@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <footer className="footer bg-neutral text-white py-10 ">
@@ -70,8 +68,9 @@ const Footer = () => {
         <div className="h-px bg-white opacity-50 my-8 w-full"></div>
 
         <p className="opacity-60">
-          &copy; 2025 CS <i className="fa-solid fa-minus"></i>{" "}
-        Ticket System. All rights reserved.</p>
+          &copy; 2025 CS <i className="fa-solid fa-minus"></i> Ticket System.
+          All rights reserved.
+        </p>
       </div>
     </footer>
   );
