@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import TaskContext from "../context/TaskContext";
+import { toast } from "react-toastify";
 
 const TaskStatusCard = ({ inProgressTask }) => {
   const { setResolvedTasks, inProgressTasks, setInProgressTasks } =
@@ -12,7 +13,8 @@ const TaskStatusCard = ({ inProgressTask }) => {
       inProgressTasks.filter((t) => t.id !== inProgressTask.id),
     );
 
-    setResolvedTasks((prev) => [...prev, inProgressTask]);
+      setResolvedTasks((prev) => [...prev, inProgressTask]);
+      toast.success("Task is resolved!");
   };
 
   return (
